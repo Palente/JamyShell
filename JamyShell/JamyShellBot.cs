@@ -9,18 +9,6 @@ using Microsoft.Extensions.Configuration;
 using JamyShell.Services;
 using Serilog;
 using Microsoft.Extensions.Http;
-/*
-using Discord;
-using Discord.Commands;
-using Discord.WebSocket;
-using System.Threading.Tasks;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using Microsoft.Extensions.DependencyInjection.Extensions;
-using Microsoft.Extensions.Configuration;
-using TicketManager.Services;
-using Serilog;
-*/
 namespace JamyShell
 {
     class JamyShellBot
