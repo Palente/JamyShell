@@ -16,7 +16,6 @@ namespace JamyShell.Commands
         [Command("info")]
         public Task Info()
         {
-            var prefix = "/";
             var proc = Process.GetCurrentProcess();
             //TODO: Rendre fonctionnel le uptime
             var uptime = proc.TotalProcessorTime.Days + " jour(s) " + proc.TotalProcessorTime.Hours + " heure(s) et " + proc.TotalProcessorTime.Minutes + " minute(s)";

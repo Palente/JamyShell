@@ -11,7 +11,7 @@ namespace JamyShell.Commands
         public DataService _database { get; set; }
 
         [Command("warn")]
-        [RequireUserPermission(Discord.GuildPermission.KickMembers, ErrorMessage = "Vous n'avez pas la permission d'utiliser cette commande!")]
+        [RequireUserPermission(GuildPermission.KickMembers, ErrorMessage = "Vous n'avez pas la permission d'utiliser cette commande!")]
         public async Task Warn(IGuildUser warnUser, [Remainder]string reason)
         {
             await _database.AddWarn(Context.User.Id, warnUser.Id, reason);

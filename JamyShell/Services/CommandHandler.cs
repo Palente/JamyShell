@@ -5,8 +5,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace JamyShell.Services
@@ -19,6 +17,7 @@ namespace JamyShell.Services
         private readonly IConfigurationRoot _config;
         private readonly IServiceProvider _services;
         private readonly DataService _database;
+        private readonly UtilsService _utils;
 
         public CommandHandler(IServiceProvider services)
         {
@@ -29,6 +28,7 @@ namespace JamyShell.Services
             _client.MessageReceived += HandleCommand;
             _logger = services.GetRequiredService<ILogger<CommandHandler>>();
             _database = services.GetRequiredService<DataService>();
+            _utils = services.GetRequiredService<UtilsService>();
         }
 
         public async Task HandleCommand(SocketMessage parameterMessage)

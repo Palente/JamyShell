@@ -39,6 +39,7 @@ namespace JamyShell
                 .AddSingleton<CommandHandler>()
                 .AddSingleton<StartupService>()
                 .AddSingleton<LoggingService>()
+                .AddSingleton<UtilsService>()
                 //.AddSingleton<ReactionService>()
                 .AddSingleton<DataService>()
                 .AddSingleton<GuildService>();
